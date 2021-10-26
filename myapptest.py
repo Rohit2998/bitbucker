@@ -15,4 +15,3 @@ def test_row_20(self):
 def test_row_40(self):
     self.assertEqual(get_check_cost(150000), 'Bullet', 'The Nearest cost to row 40 is in thebullet!')
 unittest.main()
-# git push https://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@github.com/PavanKumarKunnathu/ docker_practice.git
