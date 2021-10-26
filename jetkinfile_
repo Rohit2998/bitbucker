@@ -1,5 +1,10 @@
 pipeline {
 	agent any
+    triggers
+		{
+ 			pollSCM('* * * * *')
+			cron('0 0 * * *')
+		}
 	//agent { docker { image 'python:3.7.2' } }
  	stages {
  		stage("Compile") {
@@ -9,7 +14,7 @@ pipeline {
  		}
  		stage("Unit test") {
  			steps {
- 				sh "python myapptest.py"
+ 				sh "python unit_test_example.py"
  			}
  		}
  	}
